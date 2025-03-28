@@ -16,7 +16,7 @@ const Contact = () => {
     setLoading(true);
     await axios
       .post(
-        "https://mern-portfolio-backend-ysck.onrender.com/api/v1/message/send",
+        "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/message/send",
         { senderName, subject, message },
         {
           withCredentials: true,

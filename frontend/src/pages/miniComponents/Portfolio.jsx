@@ -11,7 +11,7 @@ const Portfolio = () => {
   useEffect(() => {
     const getMyProjects = async () => {
       const { data } = await axios.get(
-        "https://mern-portfolio-backend-ysck.onrender.com/api/v1/project/getall",
+        "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/project/getall",
         { withCredentials: true }
       );
       setProjects(data.projects);

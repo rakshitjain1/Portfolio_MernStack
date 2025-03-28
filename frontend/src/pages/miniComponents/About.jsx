@@ -9,7 +9,7 @@ const About = () => {
     const getMyProfile = async () => {
       try {
         const { data } = await axios.get(
-          "https://mern-portfolio-backend-ysck.onrender.com/api/v1/user/me/portfolio",
+          "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/user/me/portfolio",
           { withCredentials: true }
         );
         setUser(data.user);
