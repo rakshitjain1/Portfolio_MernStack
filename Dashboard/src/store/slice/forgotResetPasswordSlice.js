@@ -51,7 +51,7 @@ export const forgotPassword = (email) => async (dispatch) => {
     dispatch(forgotResetPassSlice.actions.forgotPasswordRequest());
     console.log(email);
     const response = await axios.post(
-      "https://mern-portfolio-backend-ysck.onrender.com/api/v1/user/passsword/forget",
+      "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/user/passsword/forget",
       { email },
       { withCredentials: true, headers: { "Content-Type": "application/json" } }
     );
@@ -74,7 +74,7 @@ export const resetPassword =
     try {
       dispatch(forgotResetPassSlice.actions.resetPasswordRequest());
       const response = await axios.put(
-        ` https://mern-portfolio-backend-ysck.onrender.com/api/v1/user/password/reset/${token}`,
+        ` https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/user/password/reset/${token}`,
         { password, confirmPassword },
         {
           withCredentials: true,

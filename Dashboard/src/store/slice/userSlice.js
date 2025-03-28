@@ -116,7 +116,7 @@ const userSlice = createSlice({
     dispatch(userSlice.actions.loginRequest());
     try {
       const { data } = await axios.post(
-        "https://mern-portfolio-backend-ysck.onrender.com/api/v1/user/login",
+        "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/user/login",
         { email, password },
         { withCredentials: true, headers: { "Content-Type": "application/json" } }
       );
@@ -131,7 +131,7 @@ const userSlice = createSlice({
     dispatch(userSlice.actions.loadUserRequest());
     // console.log("User loaded")
     try {
-      const { data } = await axios.get("https://mern-portfolio-backend-ysck.onrender.com/api/v1/user/me", {
+      const { data } = await axios.get("https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/user/me", {
         withCredentials: true,
       });
 
@@ -145,7 +145,7 @@ const userSlice = createSlice({
   export const logout = () => async (dispatch) => {
     try {
       const { data } = await axios.get(
-        "https://mern-portfolio-backend-ysck.onrender.com/api/v1/user/logout",
+        "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/user/logout",
         { withCredentials: true }
       );
       dispatch(userSlice.actions.logoutSuccess(data.message));
@@ -160,7 +160,7 @@ const userSlice = createSlice({
     dispatch(userSlice.actions.updatePasswordRequest());
     try {
       const { data } = await axios.put(
-        "https://mern-portfolio-backend-ysck.onrender.com/api/v1/user/update/password",
+        "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/user/update/password",
         { currentPassword, newPassword, comfirmPassword },
         {
           withCredentials: true,
@@ -180,7 +180,7 @@ export const updateProfile = (newData) => async (dispatch) => {
   dispatch(userSlice.actions.updateProfileRequest());
   try {
     const response = await axios.put(
-      "https://mern-portfolio-backend-ysck.onrender.com/api/v1/user/update/me",
+      "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/user/update/me",
       newData,
       {
         withCredentials: true,

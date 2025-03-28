@@ -88,7 +88,7 @@ const projectSlice = createSlice({
 export const getAllProjects =()=> async(dispatch)=>{
     dispatch(projectSlice.actions.getAllProjectsRequest())
     try {
-        const response = await axios.get("https://mern-portfolio-backend-ysck.onrender.com/api/v1/project/getall",
+        const response = await axios.get("https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/project/getall",
             { withCredentials: true }
         )
         dispatch(projectSlice.actions.getAllProjectsSuccess(response.data.projects))
@@ -103,7 +103,7 @@ export const addNewProject = (data) => async (dispatch) => {
   dispatch(projectSlice.actions.addNewProjectRequest());
   try {
     const response = await axios.post(
-      "https://mern-portfolio-backend-ysck.onrender.com/api/v1/project/add",
+      "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/project/add",
       data,
       {
         withCredentials: true,
@@ -123,7 +123,7 @@ export const deleteProject = (id) => async (dispatch) => {
   dispatch(projectSlice.actions.deleteProjectRequest());
   try {
     const response = await axios.delete(
-      `https://mern-portfolio-backend-ysck.onrender.com/api/v1/project/delete/${id}`,
+      `https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/project/delete/${id}`,
       {
         withCredentials: true,
       }
@@ -141,7 +141,7 @@ export const updateProject = (id, newData) => async (dispatch) => {
   dispatch(projectSlice.actions.updateProjectRequest());
   try {
     const response = await axios.put(
-      `https://mern-portfolio-backend-ysck.onrender.com/api/v1/project/update/${id}`,
+      `https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/project/update/${id}`,
       newData,
       {
         withCredentials: true,

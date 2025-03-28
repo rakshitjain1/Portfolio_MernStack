@@ -86,7 +86,7 @@ export const getAllSkills = () => async (dispatch) => {
   dispatch(skillSlice.actions.getAllSkillsRequest());
   try {
     const { data } = await axios.get(
-      "https://mern-portfolio-backend-ysck.onrender.com/api/v1/skill/getall",
+      "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/skill/getall",
       { withCredentials: true }
     );
     dispatch(skillSlice.actions.getAllSkillsSuccess(data.skills));
@@ -102,7 +102,7 @@ export const addNewSkill = (data) => async (dispatch) => {
   dispatch(skillSlice.actions.addNewSkillRequest());
   try {
     const response = await axios.post(
-      "https://mern-portfolio-backend-ysck.onrender.com/api/v1/skill/add",
+      "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/skill/add",
       data,
       {
         withCredentials: true,
@@ -119,7 +119,7 @@ export const addNewSkill = (data) => async (dispatch) => {
 export const deleteSkill = (id) => async (dispatch)=>{
     dispatch(skillSlice.actions.deleteSkillRequest());
     try {
-          const response = await axios.delete(`https://mern-portfolio-backend-ysck.onrender.com/api/v1/skill/delete/${id}`,
+          const response = await axios.delete(`https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/skill/delete/${id}`,
             {
                 withCredentials: true,
             } 
@@ -134,7 +134,7 @@ export const deleteSkill = (id) => async (dispatch)=>{
 export const updateSkill = (id, proficiency) =>async(dispatch)=>{
   dispatch(skillSlice.actions.updateSkillRequest());
   try {
-    const response = await axios.put(`https://mern-portfolio-backend-ysck.onrender.com/api/v1/skill/update/${id}`,
+    const response = await axios.put(`https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/skill/update/${id}`,
       { proficiency },
       {
         withCredentials: true,

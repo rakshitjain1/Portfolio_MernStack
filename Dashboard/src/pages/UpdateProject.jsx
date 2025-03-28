@@ -37,7 +37,7 @@ const UpdateProject = () => {
 
   useEffect(() => {
     const getProject = async () => {
-      await axios.get(`https://mern-portfolio-backend-ysck.onrender.com/api/v1/project/get/${id}`, {
+      await axios.get(`https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/project/get/${id}`, {
           withCredentials: true,
         })
         .then((res) => {

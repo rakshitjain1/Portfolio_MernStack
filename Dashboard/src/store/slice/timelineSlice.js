@@ -75,7 +75,7 @@ export const getAllTimeLine  = () => async (dispatch) => {
   dispatch(timelineSlice.actions.getAllTimeLineRequest());
   try {
     const { data } = await axios.get(
-      "https://mern-portfolio-backend-ysck.onrender.com/api/v1/timeline/getall",
+      "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/timeline/getall",
       { withCredentials: true }
     );
     // console.log(data);
@@ -94,7 +94,7 @@ export const addNewtimeline = (timelineData) => async (dispatch) => {
   dispatch(timelineSlice.actions.addTimeLineRequest());
   try {
     const {data}= await axios.post(
-      `https://mern-portfolio-backend-ysck.onrender.com/api/v1/timeline/add`,timelineData,
+      `https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/timeline/add`,timelineData,
       {
         withCredentials: true,
         headers:{"Content-Type":"application/json"}
@@ -114,7 +114,7 @@ export const deleteTimeline = (id) => async (dispatch) => {
   dispatch(timelineSlice.actions.deleteTimeLineRequest());
   try {
     const response = await axios.delete(
-      `https://mern-portfolio-backend-ysck.onrender.com/api/v1/timeline/delete/${id}`,
+      `https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/timeline/delete/${id}`,
       {
         withCredentials: true,
       }                    

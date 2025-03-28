@@ -73,7 +73,7 @@ const softwareApplicationSlice = createSlice({
 export const getAllsoftwareApplications =()=> async (dispatch)=>{
     dispatch(softwareApplicationSlice.actions.getAllsoftwareApplicationRequest());
     try {
-        const response = await axios.get("https://mern-portfolio-backend-ysck.onrender.com/api/v1/softwareApplication/getall", { withCredentials: true })
+        const response = await axios.get("https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/softwareApplication/getall", { withCredentials: true })
         dispatch(softwareApplicationSlice.actions.getAllsoftwareApplicationSuccess(response.data.softwareApplications))
         dispatch(softwareApplicationSlice.actions.clearAllErrors())
         
@@ -89,7 +89,7 @@ export const addNewSoftwareApplication = (data) => async (dispatch) => {
     );
     try {
       const response = await axios.post(
-        "https://mern-portfolio-backend-ysck.onrender.com/api/v1/softwareApplication/add",
+        "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/softwareApplication/add",
         data,
         {
           withCredentials: true,
@@ -117,7 +117,7 @@ export const addNewSoftwareApplication = (data) => async (dispatch) => {
     );
     try {
       const response = await axios.delete(
-        `https://mern-portfolio-backend-ysck.onrender.com/api/v1/softwareApplication/delete/${id}`,
+        `https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/softwareApplication/delete/${id}`,
         {
           withCredentials: true,
         }

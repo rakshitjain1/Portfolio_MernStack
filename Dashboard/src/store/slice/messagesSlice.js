@@ -57,7 +57,7 @@ export const getAllMessages = () => async (dispatch) => {
   dispatch(messageSlice.actions.getAllMessagesRequest());
   try {
     const { data } = await axios.get(
-      "https://mern-portfolio-backend-ysck.onrender.com/api/v1/message/getall",
+      "https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/message/getall",
       { withCredentials: true }
     );
     // console.log(data);
@@ -76,7 +76,7 @@ export const deleteMessage = (id) => async (dispatch) => {
   dispatch(messageSlice.actions.deleteMessageRequest());
   try {
     const response = await axios.delete(
-      `https://mern-portfolio-backend-ysck.onrender.com/api/v1/message/delete/${id}`,
+      `https://portfolio-mern-stack-backend-nine.vercel.app/api/v1/message/delete/${id}`,
       {
         withCredentials: true,
       }
