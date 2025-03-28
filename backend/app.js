@@ -19,8 +19,8 @@ dotenv.config({path:".env"})
 
 // conect backend and frontend
 app.use(cors({
-    origin:[process.env.PORTFOLIO_URL,
-            process.env.DASHBOARD_URL
+    origin:["https://portfolio-mern-stack-7mi9.vercel.app",
+        "https://portfolio-mern-stack-three.vercel.app"
            ],
     methods:["GET" , "POST" , "DELETE" , "PUT"],
     credentials:true,
